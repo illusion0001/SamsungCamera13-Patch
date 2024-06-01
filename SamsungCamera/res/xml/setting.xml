@@ -19,6 +19,14 @@
         <com.sec.android.app.camera.setting.SettingPreference android:id="@id/selfie_tone" android:title="@string/Title_Selfie_Tone" android:key="@string/key_selfie_tone" android:dependency="@string/dep_selfie" />
         <com.sec.android.app.camera.setting.SettingPreference android:id="@id/selfie_tone_v2" android:title="@string/Title_Selfie_Tone" android:key="@string/key_selfie_tone_v2" android:dependency="@string/dep_selfie" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="Custom Settings" android:key="@string/dep_videos">
+        <com.sec.android.app.camera.setting.SpinnerPreference android:entries="@array/videobitrate_list" android:title="@string/Title_videobitrate0" android:key="@string/key_videobitrate0" android:entryValues="@array/videobitrate_value" />
+        <com.sec.android.app.camera.setting.SpinnerPreference android:entries="@array/videobitrate_list" android:title="@string/Title_videobitrate1" android:key="@string/key_videobitrate1" android:entryValues="@array/videobitrate_value" />
+        <com.sec.android.app.camera.setting.SpinnerPreference android:entries="@array/videobitrate_list" android:title="@string/Title_videobitrate2" android:key="@string/key_videobitrate2" android:entryValues="@array/videobitrate_value" />
+        <com.sec.android.app.camera.setting.SpinnerPreference android:entries="@array/videobitrate_list" android:title="@string/Title_videobitrate3" android:key="@string/key_videobitrate3" android:entryValues="@array/videobitrate_value" />
+        <com.sec.android.app.camera.setting.SpinnerPreference android:entries="@array/videobitrate_list" android:title="@string/Title_videobitrate4" android:key="@string/key_videobitrate4" android:entryValues="@array/videobitrate_value" />
+        <com.sec.android.app.camera.setting.SpinnerPreference android:entries="@array/videobitrate_list" android:title="@string/Title_videobitrate5" android:key="@string/key_videobitrate5" android:entryValues="@array/videobitrate_value" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/Title_videos" android:key="@string/dep_videos">
         <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_Video_Auto_FPS" android:key="@string/key_video_auto_fps" android:summary="@string/video_auto_fps_summary" android:dependency="@string/dep_videos" />
         <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_VideoStabilisation" android:key="@string/key_video_stabilisation" android:dependency="@string/dep_videos" />

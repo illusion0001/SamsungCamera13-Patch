@@ -351,11 +351,11 @@
 .end method
 
 .method private getActiveText(II)Ljava/lang/String;
-    .locals 1
+    .locals 13
 
     const/4 v0, 0x1
 
-    if-eq p1, v0, :cond_3
+    if-eq p1, v0, :cond_4
 
     const/4 v0, 0x2
 
@@ -371,7 +371,7 @@
 
     const-string p0, ""
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 1
     :cond_0
@@ -391,7 +391,7 @@
 
     aget-object p0, p0, p2
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 2
     :cond_1
@@ -415,6 +415,49 @@
 
     .line 3
     :cond_2
+    add-int/lit8 p2, p2, 0x1
+
+    invoke-static {p2}, Lcom/sec/android/app/camera/util/MakerParameter;->getExposureTime(I)J
+
+    move-result-wide v1
+
+    long-to-double v2, v1
+
+    const-wide v4, 0x41cdcd6500000000L    # 1.0E9
+
+    div-double v2, v2, v4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-wide v6, 0x3fe0000000000000L    # 0.5
+
+    cmpg-double v7, v2, v6
+
+    if-gtz v7, :cond_3
+
+    const-wide v4, 0x3ff0000000000000L    # 1.0
+
+    div-double v2, v4, v2
+
+    const-string v1, "1/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_3
+    invoke-static {v2, v3}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -434,7 +477,29 @@
     goto :goto_0
 
     .line 4
-    :cond_3
+    :cond_4
+    add-int/lit8 p2, p2, 0x1
+
+    invoke-static {p2}, Lcom/sec/android/app/camera/util/MakerParameter;->getSensorSensitivity(I)I
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    return-object v3
+
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object p0

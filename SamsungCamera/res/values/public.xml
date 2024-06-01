@@ -169,6 +169,8 @@
     <public type="array" name="watermark_alignment_value" id="0x7f030014" />
     <public type="array" name="watermark_font_list" id="0x7f030015" />
     <public type="array" name="watermark_font_value" id="0x7f030016" />
+    <public type="array" name="videobitrate_list" id="0x7f03001f" />
+    <public type="array" name="videobitrate_value" id="0x7f030020" />
     <public type="attr" name="SharedValue" id="0x7f040000" />
     <public type="attr" name="SharedValueId" id="0x7f040001" />
     <public type="attr" name="actionBarDivider" id="0x7f040002" />
@@ -10184,6 +10186,47 @@
     <public type="string" name="zoom_slider_point_tts" id="0x7f1205eb" />
     <public type="string" name="zoom_tts" id="0x7f1205ec" />
     <public type="string" name="zoom_using_guide_tts" id="0x7f1205ed" />
+    <public type="string" name="OPTION_1000" id="0x7f1205ee" />
+    <public type="string" name="OPTION_100000" id="0x7f1205ef" />
+    <public type="string" name="OPTION_12000" id="0x7f1205f0" />
+    <public type="string" name="OPTION_125000" id="0x7f1205f1" />
+    <public type="string" name="OPTION_128" id="0x7f1205f2" />
+    <public type="string" name="OPTION_150000" id="0x7f1205f3" />
+    <public type="string" name="OPTION_16000" id="0x7f1205f4" />
+    <public type="string" name="OPTION_175000" id="0x7f1205f5" />
+    <public type="string" name="OPTION_192" id="0x7f1205f6" />
+    <public type="string" name="OPTION_20000" id="0x7f1205f7" />
+    <public type="string" name="OPTION_200000" id="0x7f1205f8" />
+    <public type="string" name="OPTION_24000" id="0x7f1205f9" />
+    <public type="string" name="OPTION_256" id="0x7f1205fa" />
+    <public type="string" name="OPTION_30000" id="0x7f1205fb" />
+    <public type="string" name="OPTION_320" id="0x7f1205fc" />
+    <public type="string" name="OPTION_36000" id="0x7f1205fd" />
+    <public type="string" name="OPTION_4000" id="0x7f1205fe" />
+    <public type="string" name="OPTION_40000" id="0x7f1205ff" />
+    <public type="string" name="OPTION_48000" id="0x7f120600" />
+    <public type="string" name="OPTION_500" id="0x7f120601" />
+    <public type="string" name="OPTION_6000" id="0x7f120602" />
+    <public type="string" name="OPTION_64" id="0x7f120603" />
+    <public type="string" name="OPTION_64000" id="0x7f120604" />
+    <public type="string" name="OPTION_8000" id="0x7f120605" />
+    <public type="string" name="OPTION_80000" id="0x7f120606" />
+    <public type="string" name="OPTION_96000" id="0x7f120607" />
+    <public type="string" name="OPTION_AUTO" id="0x7f120608" />
+    <public type="string" name="Title_modsettings" id="0x7f120609" />
+    <public type="string" name="Title_videobitrate0" id="0x7f12060a" />
+    <public type="string" name="Title_videobitrate1" id="0x7f12060b" />
+    <public type="string" name="Title_videobitrate2" id="0x7f12060c" />
+    <public type="string" name="Title_videobitrate3" id="0x7f12060d" />
+    <public type="string" name="Title_videobitrate4" id="0x7f12060e" />
+    <public type="string" name="Title_videobitrate5" id="0x7f12060f" />
+    <public type="string" name="dep_modsettings" id="0x7f120610" />
+    <public type="string" name="key_videobitrate0" id="0x7f120611" />
+    <public type="string" name="key_videobitrate1" id="0x7f120612" />
+    <public type="string" name="key_videobitrate2" id="0x7f120613" />
+    <public type="string" name="key_videobitrate3" id="0x7f120614" />
+    <public type="string" name="key_videobitrate4" id="0x7f120615" />
+    <public type="string" name="key_videobitrate5" id="0x7f120616" />
     <public type="style" name="AddingFiltersButtonTips" id="0x7f130000" />
     <public type="style" name="AlertDialog.AppCompat" id="0x7f130001" />
     <public type="style" name="AlertDialog.AppCompat.Light" id="0x7f130002" />

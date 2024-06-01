@@ -592,7 +592,7 @@
 .end method
 
 .method public static getIsoString(Landroid/content/Context;I)Ljava/lang/String;
-    .locals 2
+    .locals 14
 
     if-nez p1, :cond_0
 
@@ -607,6 +607,26 @@
 
     .line 2
     :cond_0
+    invoke-static {p1}, Lcom/sec/android/app/camera/util/MakerParameter;->getSensorSensitivity(I)I
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    return-object v3
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -663,6 +683,10 @@
 
 .method public static getMaxVideoShutterSpeed(I)I
     .locals 1
+
+    const/16 p0, 0x28
+
+    return p0
 
     invoke-static {p0}, Lcom/sec/android/app/camera/interfaces/Resolution;->getResolution(I)Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -777,7 +801,7 @@
 .end method
 
 .method public static getShutterSpeedString(Landroid/content/Context;I)Ljava/lang/String;
-    .locals 2
+    .locals 14
 
     if-nez p1, :cond_0
 
@@ -792,6 +816,47 @@
 
     .line 2
     :cond_0
+    invoke-static {p1}, Lcom/sec/android/app/camera/util/MakerParameter;->getExposureTime(I)J
+
+    move-result-wide v1
+
+    long-to-double v2, v1
+
+    const-wide v4, 0x41cdcd6500000000L    # 1.0E9
+
+    div-double v2, v2, v4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-wide v6, 0x3fe0000000000000L    # 0.5
+
+    cmpg-double v7, v2, v6
+
+    if-gtz v7, :cond_1
+
+    const-wide v4, 0x3ff0000000000000L    # 1.0
+
+    div-double v2, v4, v2
+
+    const-string v1, "1/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    invoke-static {v2, v3}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0

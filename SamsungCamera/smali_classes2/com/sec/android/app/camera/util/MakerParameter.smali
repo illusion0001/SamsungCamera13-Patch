@@ -13,7 +13,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    const/16 v0, 0x26
+    const/16 v0, 0x29
 
     new-array v0, v0, [J
 
@@ -22,7 +22,7 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/MakerParameter;->EXPOSURE_TIME_ARRAY:[J
 
-    const/16 v0, 0x10
+    const/16 v0, 0x11
 
     new-array v0, v0, [I
 
@@ -53,8 +53,11 @@
         0x2b98b7
         0x3d0900
         0x54c564
-        0x7a1200
-        0xa98ac7
+        0x7f2815
+        0xb383e2
+        0xcb7355
+        0xd3ed78
+        0xd9fb92
         0xfe502b
         0x1312d00
         0x153158e
@@ -95,6 +98,7 @@
         0x320
         0x640
         0xc80
+        0x1900
     .end array-data
 .end method
 

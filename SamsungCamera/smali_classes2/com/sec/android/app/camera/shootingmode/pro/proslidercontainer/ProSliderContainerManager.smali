@@ -37,6 +37,24 @@
         }
     .end annotation
 
+    new-instance v1, Landroid/util/Range;
+
+    const v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    const p0, 0x10
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-direct {v1, v0, p0}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+
+    return-object v1
+
     .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/pro/proslidercontainer/ProSliderContainerManager;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
 
@@ -154,6 +172,24 @@
             ">;"
         }
     .end annotation
+
+    new-instance v1, Landroid/util/Range;
+
+    const v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    const p0, 0x28
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-direct {v1, v0, p0}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+
+    return-object v1
 
     .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/pro/proslidercontainer/ProSliderContainerManager;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;

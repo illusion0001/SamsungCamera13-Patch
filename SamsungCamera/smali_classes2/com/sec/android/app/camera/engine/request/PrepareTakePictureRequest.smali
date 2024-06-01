@@ -154,6 +154,16 @@
 
     move-result-object v2
 
+    sget-object v3, Lcom/samsung/android/camera/core2/MakerPublicKey;->w:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    const v4, 0x64
+
+    invoke-static {v4}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v3, v4}, Lcom/sec/android/app/camera/engine/request/MakerPublicSettings;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
+
     const-string v3, "Capture - PrepareTakePictureRequest"
 
     .line 3

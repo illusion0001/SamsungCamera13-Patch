@@ -3801,6 +3801,8 @@
 
     .line 40
     :cond_1
+    return-void
+
     new-instance p0, Ljava/lang/RuntimeException;
 
     new-instance p1, Ljava/lang/StringBuilder;

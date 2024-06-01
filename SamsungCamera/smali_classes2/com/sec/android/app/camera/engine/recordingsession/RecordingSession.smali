@@ -1814,7 +1814,7 @@
 .end method
 
 .method prepareMediaRecorder()V
-    .locals 8
+    .locals 15
 
     const-string v0, "RecordingSession"
 
@@ -2107,11 +2107,187 @@
 
     iget-object v2, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorderProfile:Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;
 
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->getVideoWidth()I
+
+    move-result v3
+
+    const/16 v1, 0x780
+
+    if-ne v3, v1, :cond_5
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorderProfile:Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->getVideoFrameRate()I
+
+    move-result v3
+
+    const/16 v1, 0x18
+
+    if-eq v3, v1, :cond_7
+
+    const/16 v1, 0x1e
+
+    if-eq v3, v1, :cond_7
+
+    const/16 v1, 0x3c
+
+    if-eq v3, v1, :cond_8
+
+    const/16 v1, 0x78
+
+    if-eq v3, v1, :cond_9
+
+    :cond_5
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
+
+    iget-object v2, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorderProfile:Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;
+
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->getVideoWidth()I
+
+    move-result v3
+
+    const/16 v1, 0xf00
+
+    if-ne v3, v1, :cond_6
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorderProfile:Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->getVideoFrameRate()I
+
+    move-result v3
+
+    const/16 v1, 0x18
+
+    if-eq v3, v1, :cond_a
+
+    const/16 v1, 0x1e
+
+    if-eq v3, v1, :cond_a
+
+    const/16 v1, 0x3c
+
+    if-eq v3, v1, :cond_b
+
+    :cond_6
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
+
+    iget-object v2, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorderProfile:Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;
+
     invoke-virtual {v2}, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->getVideoEncodingBitrate()I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setVideoEncodingBitRate(I)V
+
+    goto :goto_2
+
+    :cond_7
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mContext:Landroid/content/Context;
+
+    const-string v1, "mod_video_bitrate_0"
+
+    const v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->loadPreferences(Landroid/content/Context;Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-lez v2, :cond_6
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
+
+    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setVideoEncodingBitRate(I)V
+
+    goto :goto_2
+
+    :cond_8
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mContext:Landroid/content/Context;
+
+    const-string v1, "mod_video_bitrate_1"
+
+    const v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->loadPreferences(Landroid/content/Context;Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-lez v2, :cond_6
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
+
+    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setVideoEncodingBitRate(I)V
+
+    goto :goto_2
+
+    :cond_9
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mContext:Landroid/content/Context;
+
+    const-string v1, "mod_video_bitrate_2"
+
+    const v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->loadPreferences(Landroid/content/Context;Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-lez v2, :cond_6
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
+
+    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setVideoEncodingBitRate(I)V
+
+    goto :goto_2
+
+    :cond_a
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mContext:Landroid/content/Context;
+
+    const-string v1, "mod_video_bitrate_3"
+
+    const v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->loadPreferences(Landroid/content/Context;Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-lez v2, :cond_6
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
+
+    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setVideoEncodingBitRate(I)V
+
+    goto :goto_2
+
+    :cond_b
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mContext:Landroid/content/Context;
+
+    const-string v1, "mod_video_bitrate_4"
+
+    const v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->loadPreferences(Landroid/content/Context;Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-lez v2, :cond_6
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
+
+    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setVideoEncodingBitRate(I)V
+
+    goto :goto_2
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
+
+    iget-object v2, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorderProfile:Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;
+
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->getVideoEncodingBitrate()I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setVideoEncodingBitRate(I)V
+
+    :goto_2
+    const-string v1, "ShootingMode - PrepareMediaRecorder"
 
     .line 28
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
@@ -2164,7 +2340,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_c
 
     .line 33
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
@@ -2178,7 +2354,7 @@
     invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setAudioEncoder(I)V
 
     .line 34
-    :cond_5
+    :cond_c
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mSurface:Landroid/view/Surface;
@@ -2216,7 +2392,7 @@
     :catchall_0
     move-exception p0
 
-    goto :goto_2
+    goto :goto_3
 
     .line 38
     :catch_1
@@ -2230,7 +2406,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 39
-    :goto_2
+    :goto_3
     invoke-static {v1, v4}, Lcom/sec/android/app/camera/util/PerformanceLog;->log(Ljava/lang/String;Z)V
 
     .line 40

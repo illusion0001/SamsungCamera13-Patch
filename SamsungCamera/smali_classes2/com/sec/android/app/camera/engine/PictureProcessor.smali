@@ -804,6 +804,16 @@
 
     .line 3
     :cond_0
+    iget-object p0, p0, Lcom/sec/android/app/camera/engine/PictureProcessor;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
+
+    sget-object p1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->STORAGE:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    invoke-interface {p0, p1}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->get(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
+
+    move-result v1
+
+    return v1
+
     sget-object v0, Lcom/sec/android/app/camera/engine/PictureProcessor$1;->$SwitchMap$com$sec$android$app$camera$interfaces$InternalEngine$PictureSavingType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -879,6 +889,8 @@
 
     :goto_0
     return v1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

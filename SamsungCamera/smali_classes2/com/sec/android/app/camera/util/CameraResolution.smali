@@ -1039,6 +1039,10 @@
 .method public static getCamcorderExternalStorageAvailableFeature(ILcom/sec/android/app/camera/interfaces/Resolution;)Z
     .locals 1
 
+    const/4 v0, 0x1
+
+    return v0
+
     if-nez p0, :cond_0
 
     .line 1

@@ -8543,6 +8543,54 @@
     .line 484
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->mDefaultValueGetterMap:Ljava/util/EnumMap;
 
+    sget-object v1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_0:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    sget-object v2, Lcom/sec/android/app/camera/setting/repository/m5;->a:Lcom/sec/android/app/camera/setting/repository/m5;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->mDefaultValueGetterMap:Ljava/util/EnumMap;
+
+    sget-object v1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_1:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    sget-object v2, Lcom/sec/android/app/camera/setting/repository/m5;->a:Lcom/sec/android/app/camera/setting/repository/m5;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->mDefaultValueGetterMap:Ljava/util/EnumMap;
+
+    sget-object v1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_2:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    sget-object v2, Lcom/sec/android/app/camera/setting/repository/m5;->a:Lcom/sec/android/app/camera/setting/repository/m5;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->mDefaultValueGetterMap:Ljava/util/EnumMap;
+
+    sget-object v1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_3:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    sget-object v2, Lcom/sec/android/app/camera/setting/repository/m5;->a:Lcom/sec/android/app/camera/setting/repository/m5;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->mDefaultValueGetterMap:Ljava/util/EnumMap;
+
+    sget-object v1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_4:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    sget-object v2, Lcom/sec/android/app/camera/setting/repository/m5;->a:Lcom/sec/android/app/camera/setting/repository/m5;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->mDefaultValueGetterMap:Ljava/util/EnumMap;
+
+    sget-object v1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_5:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    sget-object v2, Lcom/sec/android/app/camera/setting/repository/m5;->a:Lcom/sec/android/app/camera/setting/repository/m5;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->mDefaultValueGetterMap:Ljava/util/EnumMap;
+
     invoke-virtual {v0}, Ljava/util/EnumMap;->size()I
 
     move-result v0

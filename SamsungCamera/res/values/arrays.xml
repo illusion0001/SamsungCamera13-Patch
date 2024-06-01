@@ -305,4 +305,52 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+    <string-array name="videobitrate_list">
+        <item>@string/OPTION_AUTO</item>
+        <item>@string/OPTION_500</item>
+        <item>@string/OPTION_1000</item>
+        <item>@string/OPTION_4000</item>
+        <item>@string/OPTION_6000</item>
+        <item>@string/OPTION_8000</item>
+        <item>@string/OPTION_12000</item>
+        <item>@string/OPTION_16000</item>
+        <item>@string/OPTION_20000</item>
+        <item>@string/OPTION_24000</item>
+        <item>@string/OPTION_30000</item>
+        <item>@string/OPTION_36000</item>
+        <item>@string/OPTION_40000</item>
+        <item>@string/OPTION_48000</item>
+        <item>@string/OPTION_64000</item>
+        <item>@string/OPTION_80000</item>
+        <item>@string/OPTION_96000</item>
+        <item>@string/OPTION_100000</item>
+        <item>@string/OPTION_125000</item>
+        <item>@string/OPTION_150000</item>
+        <item>@string/OPTION_175000</item>
+        <item>@string/OPTION_200000</item>
+    </string-array>
+    <string-array name="videobitrate_value">
+        <item>0</item>
+        <item>500000</item>
+        <item>1000000</item>
+        <item>4000000</item>
+        <item>6000000</item>
+        <item>8000000</item>
+        <item>12000000</item>
+        <item>16000000</item>
+        <item>20000000</item>
+        <item>24000000</item>
+        <item>30000000</item>
+        <item>36000000</item>
+        <item>40000000</item>
+        <item>48000000</item>
+        <item>64000000</item>
+        <item>80000000</item>
+        <item>96000000</item>
+        <item>100000000</item>
+        <item>125000000</item>
+        <item>150000000</item>
+        <item>175000000</item>
+        <item>200000000</item>
+    </string-array>
 </resources>

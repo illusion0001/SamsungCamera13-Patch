@@ -794,6 +794,18 @@
 
 .field public static final enum MODE_CUSTOM_SETTING:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
+.field public static final enum MOD_VIDEO_BITRATE_0:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+.field public static final enum MOD_VIDEO_BITRATE_1:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+.field public static final enum MOD_VIDEO_BITRATE_2:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+.field public static final enum MOD_VIDEO_BITRATE_3:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+.field public static final enum MOD_VIDEO_BITRATE_4:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+.field public static final enum MOD_VIDEO_BITRATE_5:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
 .field public static final enum MOTION_PHOTO:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
 .field public static final enum MULTI_AF_MODE:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
@@ -1004,7 +1016,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 485
+    .locals 1024
 
     .line 1
     new-instance v0, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
@@ -7254,7 +7266,79 @@
 
     sput-object v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->TIMER_SHOT_INTERVAL:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
-    const/16 v1, 0x1e2
+    new-instance v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    const-string v9, "MOD_VIDEO_BITRATE_0"
+
+    move-object/16 v485, v5
+
+    const/16 v7, 0x1e2
+
+    invoke-direct {v5, v9, v7, v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;-><init>(Ljava/lang/String;ILcom/sec/android/app/camera/interfaces/CameraSettings$Type;)V
+
+    sput-object v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_0:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    new-instance v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    const-string v9, "MOD_VIDEO_BITRATE_1"
+
+    move-object/16 v486, v5
+
+    const/16 v7, 0x1e3
+
+    invoke-direct {v5, v9, v7, v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;-><init>(Ljava/lang/String;ILcom/sec/android/app/camera/interfaces/CameraSettings$Type;)V
+
+    sput-object v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_1:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    new-instance v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    const-string v9, "MOD_VIDEO_BITRATE_2"
+
+    move-object/16 v487, v5
+
+    const/16 v7, 0x1e4
+
+    invoke-direct {v5, v9, v7, v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;-><init>(Ljava/lang/String;ILcom/sec/android/app/camera/interfaces/CameraSettings$Type;)V
+
+    sput-object v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_2:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    new-instance v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    const-string v9, "MOD_VIDEO_BITRATE_3"
+
+    move-object/16 v488, v5
+
+    const/16 v7, 0x1e5
+
+    invoke-direct {v5, v9, v7, v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;-><init>(Ljava/lang/String;ILcom/sec/android/app/camera/interfaces/CameraSettings$Type;)V
+
+    sput-object v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_3:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    new-instance v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    const-string v9, "MOD_VIDEO_BITRATE_4"
+
+    move-object/16 v489, v5
+
+    const/16 v7, 0x1e6
+
+    invoke-direct {v5, v9, v7, v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;-><init>(Ljava/lang/String;ILcom/sec/android/app/camera/interfaces/CameraSettings$Type;)V
+
+    sput-object v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_4:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    new-instance v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    const-string v9, "MOD_VIDEO_BITRATE_5"
+
+    move-object/16 v490, v5
+
+    const/16 v7, 0x1e7
+
+    invoke-direct {v5, v9, v7, v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;-><init>(Ljava/lang/String;ILcom/sec/android/app/camera/interfaces/CameraSettings$Type;)V
+
+    sput-object v5, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOD_VIDEO_BITRATE_5:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
+
+    const/16 v1, 0x1e8
 
     new-array v1, v1, [Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
@@ -9685,6 +9769,42 @@
     aput-object v2, v1, v0
 
     const/16 v0, 0x1e1
+
+    move-object/from16 v2, v485
+
+    aput-object v2, v1, v0
+
+    const/16 v0, 0x1e2
+
+    move-object/from16 v2, v486
+
+    aput-object v2, v1, v0
+
+    const/16 v0, 0x1e3
+
+    move-object/from16 v2, v487
+
+    aput-object v2, v1, v0
+
+    const/16 v0, 0x1e4
+
+    move-object/from16 v2, v488
+
+    aput-object v2, v1, v0
+
+    const/16 v0, 0x1e5
+
+    move-object/from16 v2, v489
+
+    aput-object v2, v1, v0
+
+    const/16 v0, 0x1e6
+
+    move-object/from16 v2, v490
+
+    aput-object v2, v1, v0
+
+    const/16 v0, 0x1e7
 
     aput-object v5, v1, v0
 
