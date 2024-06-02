@@ -4572,11 +4572,12 @@
     invoke-interface {v2}, Lcom/sec/android/app/camera/interfaces/CameraDialogManager;->checkExternalSdStorage()V
 
     .line 9
-    iget-object v2, p0, Lcom/sec/android/app/camera/Camera;->mCameraDialogManager:Lcom/sec/android/app/camera/interfaces/CameraDialogManager;
+    # No location tag dialog on launch
+    # iget-object v2, p0, Lcom/sec/android/app/camera/Camera;->mCameraDialogManager:Lcom/sec/android/app/camera/interfaces/CameraDialogManager;
 
-    sget-object v3, Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;->LOCATION_TAG_GUIDE_FIRST_LAUNCH_CAMERA:Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;
+    # sget-object v3, Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;->LOCATION_TAG_GUIDE_FIRST_LAUNCH_CAMERA:Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;
 
-    invoke-interface {v2, v3}, Lcom/sec/android/app/camera/interfaces/CameraDialogManager;->showCameraDialog(Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;)V
+    # invoke-interface {v2, v3}, Lcom/sec/android/app/camera/interfaces/CameraDialogManager;->showCameraDialog(Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;)V
 
     .line 10
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera;->mCameraDialogManager:Lcom/sec/android/app/camera/interfaces/CameraDialogManager;
